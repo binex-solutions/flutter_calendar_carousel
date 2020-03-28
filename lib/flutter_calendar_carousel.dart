@@ -387,6 +387,19 @@ class _CalendarState<T> extends State<CalendarCarousel<T>> {
                                 ),
                       child: Stack(
                         children: <Widget>[
+                          isSelectable
+                                ? Container(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.red,
+                                          width: 2,
+                                        ),
+                                      ),
+                                    ),
+                                    padding: EdgeInsets.only(bottom: 4.0),
+                                  )
+                                : Container(),
                           Center(
                             child: DefaultTextStyle(
                               style: (_localeDate.dateSymbols.WEEKENDRANGE
@@ -554,6 +567,19 @@ class _CalendarState<T> extends State<CalendarCarousel<T>> {
                                   ),
                         child: Stack(
                           children: <Widget>[
+                            isSelectable
+                                ? Container(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.red,
+                                          width: 2,
+                                        ),
+                                      ),
+                                    ),
+                                    padding: EdgeInsets.only(bottom: 4.0),
+                                  )
+                                : Container(),
                             Center(
                               child: DefaultTextStyle(
                                 style: (index % 7 == 0 || index % 7 == 6) &&
